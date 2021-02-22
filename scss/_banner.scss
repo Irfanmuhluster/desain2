@@ -1,0 +1,76 @@
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    .banner-items {
+        display: grid;
+        @include for-tablet-landscape-up() {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        .box {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+            @include for-tablet-landscape-up() {
+                background-image: linear-gradient(to bottom, rgba(180, 83, 9, 0.75), white);            
+                padding-left: 3rem;
+            }
+            padding-left: 0rem;
+            background-image: linear-gradient(to bottom, rgba(180, 83, 9, 0.75), transparent);
+        }
+        .banner-items-right {
+            @include for-tablet-landscape-up() {
+                padding-right: 6rem;
+                padding-top: 6rem;
+                top: initial;
+                position: initial;
+                // z-index: 0;
+            }
+            padding-right: 0rem;
+            padding-top: 0rem;
+            top: -135px;
+            position: relative;
+            z-index: -1;
+
+            padding-bottom: 6rem;
+            .img-cover {
+                object-position: top;
+                border-radius: .25rem;
+                width: 100%;
+                height: 400px;
+                min-height: 400px;
+                object-fit: cover;
+                box-shadow: $shadow;
+            }
+        }
+        .banner-items-left {
+            position: relative;
+            @include for-tablet-landscape-up() {            
+                left: 4rem;
+            }
+            left: 0rem;
+            top: 4rem;
+            padding: 2rem;
+            background-color: rgba(229,229,229,0.75);
+            border-radius: $border-radius-normal;
+            .welcome-title {
+                color: #a85418;
+                // margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+                @include text-3xl();
+                font-weight: 700;
+            }
+            .welcome-desc {
+                @include text-base();
+                line-height: 1.625;
+                font-weight: 500;
+                letter-spacing: 0.025em;
+                margin-bottom: 1.5rem;
+                color: $gray-800;
+            }
+        }
+    }
+}

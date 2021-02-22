@@ -1,0 +1,30 @@
+.heading-promo {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: #f59e0b;
+    text-align: left;
+    padding-top: 1.5rem;
+    padding-left: 3rem;
+    background-color: white;
+    &::after {
+        content: "";
+        position: relative;
+        // width: 70px;
+        height: 3px;
+        background-color: $coolGray-400;
+        display: block;
+        margin-top: 0px;
+        margin-top: 0.5%;
+        width: 10%;
+    }
+}
+
+.promo {
+    color: $gray-800;
+    @include text-4xl();
+    font-weight: $font-bold;
+    letter-spacing: $tracking-wide;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}

@@ -1,0 +1,43 @@
+.testimonial {
+    display: flex;    
+    @include for-tablet-landscape-up {
+        flex-direction: row;
+    }
+    flex-direction: column;
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: $coolGray-50;
+    bottom: auto;
+    .testimonial-box {
+        flex: 1 1 0%;
+        width: 100%;
+        overflow: hidden;
+        border-radius: $border-radius-md;
+        box-shadow: $shadow-md;
+        background-color: white;
+        text-align: left;
+        padding: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        .testimonial-welcome-by {
+            font-weight: $font-medium;
+            color: $cyan-600;
+        }
+        .testimonial-welcome-level {
+            color: $gray-500;
+        }
+        .testimonial-title {
+            font-weight: $font-bold;
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+        }
+        p {
+            color: $gray-800;
+            font-weight: $font-medium;
+            @include text-base();
+        }
+    }
+}

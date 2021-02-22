@@ -1,0 +1,42 @@
+.warpper {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: column wrap;
+    @include for-tablet-landscape-up {
+        height: 800px;
+        padding-left: 12rem;
+        padding-right: 12rem;
+    }
+    @include for-desktop-up {
+        height: 530px;
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    align-items: center;
+    height: auto;
+}
+
+.gallery-box {
+    // display: inline-block;
+    margin: 0.25rem;
+    @include for-tablet-landscape-up {
+        max-width: 20rem;
+    }
+    max-width: fit-content;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    height: auto;
+    .gallery-box-img {
+        align-items: center;
+        object-fit: cover;
+        width: 100%;
+        display: flex;
+    }
+}
