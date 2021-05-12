@@ -504,13 +504,17 @@ header {
   width: 100%;
   padding-top: 1.5rem;
   padding-bottom: 3rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   background-color: #f9fafb;
   bottom: auto; }
   @media (min-width: 900px) {
     .testimonial {
       flex-direction: row; } }
+  @media (min-width: 900px) {
+    .testimonial {
+      padding-left: 3rem;
+      padding-right: 3rem; } }
   .testimonial .testimonial-box {
     flex: 1 1 0%;
     width: 100%;
@@ -520,8 +524,12 @@ header {
     background-color: white;
     text-align: left;
     padding: 1.5rem;
-    margin-left: 1rem;
+    margin-left: 0rem;
+    margin-bottom: 1rem;
     margin-right: 1rem; }
+    @media (min-width: 900px) {
+      .testimonial .testimonial-box {
+        margin-left: 1rem; } }
     .testimonial .testimonial-box .testimonial-welcome-by {
       font-weight: 500;
       color: #0891b2; }

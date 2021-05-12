@@ -7,8 +7,12 @@
     width: 100%;
     padding-top: 1.5rem;
     padding-bottom: 3rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    @include for-tablet-landscape-up {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    padding-left: 1rem;
+    padding-right: 1rem;
     background-color: $coolGray-50;
     bottom: auto;
     .testimonial-box {
@@ -20,7 +24,11 @@
         background-color: white;
         text-align: left;
         padding: 1.5rem;
-        margin-left: 1rem;
+        @include for-tablet-landscape-up {
+            margin-left: 1rem;
+        }
+        margin-left: 0rem;
+        margin-bottom: 1rem;
         margin-right: 1rem;
         .testimonial-welcome-by {
             font-weight: $font-medium;
